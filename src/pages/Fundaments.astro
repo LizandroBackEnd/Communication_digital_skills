@@ -15,17 +15,57 @@ import Footer from "../components/Footer.astro";
         <Header /> 
         <main> 
           <!-- Section Home -->
-      <section id="Home" class="p-4 bg-[#1A1A1A]">
+      <section id="Fundaments" class="p-4 bg-[#1A1A1A]">
         <div class="flex justify-between items-center mb-8">
-          <div class="w-1/2">
-            <p class="font-roboto text-7xl mt-3 text-white">La comunicación digital transforma habilidades en herramientas poderosas, conectando ideas y acercando oportunidades.</p>
+          <div class="w-1/2"> 
+            <p class="font-koulen text-7xl text-white mt-6">¿Que es la informacion?</p>
+            <p class="font-roboto text-6xl mt-8 text-white">Conjunto de datos organizados con un significado determinado dentro de un contexto específico.</p>
           </div>
-          <div class="w-1/2 flex justify-end">
-            <img src="./public/brain.png" alt="Image brain" class="h-85 w-85 object-cover" />
+          <div class="w-1/2 flex justify-end mt-20 mr-16">
+            <img src="./public/fundaments.png" alt="Image brain" class="object-cover rounded-md"  style="height: 600px; width: 400px;"/>
           </div>
         </div>  
-      </section>  
-        </main>
+      </section>     
+       
+      <!-- Section types information -->  
+      <section id="Cards" class="p-4 bg-[#2A2A2A]">
+        <div class="text-center mb-8">
+          <h2 class="text-6xl font-koulen text-white mt-16">Tipos de informacion</h2>
+        </div> 
+         
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center mt-16">
+          <div class="bg-[#1A1A1A] rounded-lg shadow-lg p-6" style="height: 600px; width: 500px;">
+            <img src="./public/factual.png" alt="factual" class="w-34 h-64 object-cover rounded-md mb-4 mx-auto" />
+            <h3 class="text-2xl font-koulen mb-2 text-white text-center mt-8">Informacion factual</h3>
+            <p class="text-white font-roboto">Datos concretos y comprobables, basados en hechos. Se caracteriza por ser objetiva y es fundamental para el análisis crítico.</p>
+          </div>
+ 
+
+          <div class="bg-[#1A1A1A] rounded-lg shadow-lg p-6" style="height: 600px; width: 500px;">
+            <img src="./public/analitica.png" alt="Card 2" class="w-full h-64 object-cover rounded-md mb-4 mx-auto" />
+            <h3 class="text-2xl font-koulen text-center mb-2 text-white mt-8">Informacion analitica</h3>
+            <p class="text-white font-roboto">Se genera a partir del análisis de datos y hechos para extraer conclusiones, identificar patrones y facilitar la toma de decisiones. A diferencia de la información factual, que se centra en datos objetivos y verificables, la información analítica implica un proceso de interpretación y contextualización de esos datos.</p>
+          </div>
+ 
+
+          <div class="bg-[#1A1A1A] rounded-lg shadow-lg p-6" style="height: 600px; width: 500px;">
+            <img src="./public/subjectic.png" alt="Card 3" class="w-54 h-64 object-cover rounded-md mb-4 mx-auto" />
+            <h3 class="text-2xl font-koulen text-center mb-2 text-white mt-8">Informacion subjetiva</h3>
+            <p class="text-white font-roboto">Está basada en emociones, percepciones, opiniones y experiencias personales como la intuición y no en el razonamiento. Está vinculada a la perspectiva personal y puede variar de una persona a otra.</p>
+          </div>
+ 
+
+          <div class="bg-[#1A1A1A] rounded-lg shadow-lg p-6" style="height: 600px; width: 500px;">
+            <img src="./public/objetive.png" alt="Card 4" class="w-full h-64 object-cover rounded-md mb-4 mx-auto" />
+            <h3 class="text-2xl font-koulen text-center mb-2 text-white mt-8">Informacion Objetiva</h3>
+            <p class="text-white font-roboto">Se refiere a datos y hechos que son presentados de manera imparcial, pero también pueden involucrar un proceso de análisis e interpretación basado en evidencia.</p>
+          </div>
+        </div>
+      </section>
+
+        </main> 
+        <Footer />
     </body>
      
 
