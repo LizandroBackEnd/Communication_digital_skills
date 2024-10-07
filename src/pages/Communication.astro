@@ -1,7 +1,8 @@
 ---
 import Header from "../components/Header.astro"; 
 import Footer from "../components/Footer.astro";
-import Head from "../components/Head.astro";
+import Head from "../components/Head.astro"; 
+import Techniques from "../components/Techniques.astro";
 --- 
  
 <html>  
@@ -22,7 +23,25 @@ import Head from "../components/Head.astro";
               </div>  
             </section>  
              
-            <!-- Section Communication -->
+            <!-- Section Communication 1 -->  
+            <section class="p-4 bg-[#2A2A2A]">
+                <div class="text-center mb-8">
+                  <h2 class="text-6xl font-koulen text-white mt-10">IDEAS Y ESTRATEGIAS DE LA COMUNICACION EFECTIVA</h2>
+                </div> 
+            
+                <div class="flex justify-between items-center mb-8">
+                  <div class="w-1/2 ml-20">
+                    <img src="./public/c1.png" alt="Communication" class="object-cover rounded-md" style="height: 700px; width: 500px;" />
+                  </div> 
+                  <div class="w-1/2 flex flex-col justify-center">
+                    <Techniques subtitle="Claridad y Concisión" description="Evita la ambigüedad: Los mensajes deben ser claros y directos, evitando el uso excesivo de tecnicismos si no es necesario."/>  
+                    <Techniques subtitle="Escucha Activa" description="Presta atención completa: Escucha sin interrupciones y haz preguntas cuando algo no quede claro."/>  
+                    <Techniques subtitle="Retroalimentación Constructiva" description="Ofrece retroalimentación específica: Señala comportamientos o resultados específicos y proporciona sugerencias claras para mejorar."/> 
+                    <Techniques subtitle="Lenguaje Corporal" description="Postura abierta y receptiva: Evita cruzar los brazos o parecer distante, lo que podría interpretarse como falta de interés." />
+                  </div>
+                </div>
+              </section>  
+              
         </main>
     </body>
 </html>
