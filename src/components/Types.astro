@@ -1,0 +1,51 @@
+---
+const items = [
+  {
+    icon: "fas fa-comment-dots", 
+    subtitle: "Mensajería instantánea",
+    text: "Plataformas que permiten enviar mensajes de texto, audio, video o archivos en tiempo real, facilitando una comunicación rápida y directa entre usuarios. Ejemplos: WhatsApp y Telegram.",
+  },
+  {
+    icon: "fas fa-video",
+    subtitle: "Videollamadas",
+    text: "Herramientas que permiten reuniones virtuales mediante video y audio en tiempo real, útiles para trabajo remoto, clases o reuniones familiares. Ejemplos: Zoom y Google Meet.",
+  },
+  {
+    icon: "fas fa-envelope",
+    subtitle: "Correo electrónico",
+    text: "Servicio que permite enviar y recibir mensajes formales o informativos, adjuntando archivos si es necesario. Es ampliamente utilizado en entornos laborales y académicos. Ejemplos: Gmail, Outlook.",
+  },
+  {
+    icon: "fas fa-users",
+    subtitle: "Redes sociales",
+    text: "Plataformas que facilitan la interacción y el intercambio de contenido (imágenes, videos, mensajes) entre usuarios. Fomentan la creación de comunidades y conexiones. Ejemplos: Facebook, Twitter.",
+  }, 
+  {
+    icon: "fas fa-comments",
+    subtitle: "Colaboración en equipo",
+    text: "Herramientas que combinan mensajería, documentos compartidos y gestión de tareas para facilitar el trabajo colaborativo en proyectos. Especialmente útiles en empresas. Ejemplos: Slack, Microsoft Teams.",
+  }, 
+  {
+    icon: "fas fa-tasks",
+    subtitle: "Gestión de proyectos",
+    text: "Aplicaciones que permiten organizar y monitorear tareas, plazos y responsables, facilitando el seguimiento de proyectos y la colaboración en equipo. Ejemplos: Trello, Asana.",
+  },
+];
+---
+
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    {items.map((item) => (
+      <div class="flex items-start p-6 rounded-lg space-x-4">
+        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full text-xl text-black">
+          <i class={item.icon}></i>
+        </div>
+        <div>
+          <h2 class="text-4xl font-roboto text-white mb-4">{item.subtitle}</h2>
+          <p class="text-white font-roboto text-lg">{item.text}</p>
+        </div>
+      </div>
+    ))}
+</div>
+
