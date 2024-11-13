@@ -1,0 +1,28 @@
+---
+const steps = [
+  { icon: "fas fa-handshake", number: "01", title: "Respeto", text: "Tratar a otros con cortesía y reconocer la propiedad intelectual." },
+  { icon: "fas fa-user-secret", number: "02", title: "Privacidad", text: "Proteger datos personales y respetar la información ajena." },
+  { icon: "fas fa-shield-alt", number: "03", title: "Seguridad", text: "Usar contraseñas fuertes y evitar enlaces o fuentes sospechosas." },
+  { icon: "fas fa-balance-scale", number: "04", title: "Honestidad", text: "Ser sincero, evitar fraudes y desinformación." },
+  { icon: "fas fa-globe", number: "05", title: "Responsabilidad Social", text: "Compartir contenido que no dañe ni desinforme a la comunidad." }, 
+  { icon: "fas fa-heart", number: "06", title: "Empatía", text: "Ser comprensivo con los demás y evitar comentarios que puedan herir." },
+
+];
+---
+
+<div class="text-white py-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6"> <!-- Cambiado a grid-cols-3 y max-w-6xl -->
+      {steps.map((step, index) => (
+        <div key={index} class="flex flex-col items-center border border-gray-700 p-8 mx-6 w-full"> <!-- Ajuste en padding y margen -->
+          <div class="text-4xl text-gray-500 mb-4">
+            <i class={step.icon}></i>
+          </div>
+          <p class="text-4xl font-roboto text-green-500">{step.number}</p>
+          <h3 class="text-lg font-roboto mt-2 mb-2 text-center">{step.title}</h3>
+          <p class="text-center font-roboto text-gray-500 mt-2">{step.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+  
+  

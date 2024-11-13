@@ -1,0 +1,51 @@
+---
+const slides = [
+  { title: "Usa Contraseñas Fuertes y Únicas", text: "Combina letras, números y símbolos en tus contraseñas, evitando información predecible. Usa contraseñas diferentes para cada cuenta importante y, si es posible, un administrador de contraseñas para gestionarlas." },
+  { title: "Autenticación en Dos Factores (2FA)", text: "Habilita la autenticación en dos factores en tus cuentas siempre que sea posible. Esto añade una capa extra de seguridad al requerir un segundo paso de verificación además de tu contraseña." },
+  { title: "Evita Redes Públicas para Transacciones", text: "Cuando realices transacciones o ingreses a tus cuentas, evita usar redes Wi-Fi públicas. Si es necesario, usa una red privada virtual (VPN) para proteger tus datos." }, 
+  { title: "Descarga Solo de Fuentes Confiables", text: "Al instalar aplicaciones o software, asegúrate de que provienen de fuentes verificadas o tiendas oficiales para evitar virus o software malicioso." },
+  { title: "Configura la Privacidad en Redes Sociales", text: "Revisa y ajusta las configuraciones de privacidad en tus redes sociales. Limita quién puede ver tu información y publica de forma segura, evitando revelar detalles personales." },
+  { title: "Actualiza tus Dispositivos Regularmente", text: "Mantén tu sistema operativo y aplicaciones actualizadas. Las actualizaciones suelen incluir parches de seguridad que protegen contra vulnerabilidades recientes." },
+
+];
+---
+
+<div class="relative w-full max-w-2xl mx-auto overflow-hidden">
+  <div id="slider" class="flex transition-transform duration-300 ease-in-out">
+    {slides.map((slide, index) => (
+      <div key={index} class="w-full flex-shrink-0 flex flex-col items-center justify-center p-8 bg-[#2A2A2A]">
+        <h2 class="text-4xl text-white font-roboto text-center mb-2">{slide.title}</h2>
+        <p class="text-center text-2xl text-white font-roboto mt-4">{slide.text}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Controles del slider -->
+  <button id="prevSlide" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full">
+    <i class="fas fa-chevron-left"></i>
+  </button>
+  <button id="nextSlide" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full">
+    <i class="fas fa-chevron-right"></i>
+  </button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('#slider > div');
+  const totalSlides = slides.length;
+
+  document.getElementById('nextSlide').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+  });
+
+  document.getElementById('prevSlide').addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+
+  function updateSlider() {
+    const slider = document.getElementById('slider');
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+</script>

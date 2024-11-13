@@ -2,15 +2,46 @@
 import Header from "../components/Header.astro"; 
 import Footer from "../components/Footer.astro"; 
 import Head from "../components/Head.astro"; 
+import Home from "../components/Home.astro"; 
+import Slider from "../components/Slider.astro"; 
+import Table from "../components/Table.astro";
 --- 
-   
-<html> 
-    <Head  title="Responsability and etical digital"> 
-    <Header />  
+ 
+<html>  
+  <Head title="Etica y Responsabilidad Digital"/>  
     <body> 
+        <Header />
         <main> 
-            
-        </main>
+          <!-- Section Home --> 
+           <Home title="¿Que es la etica y responsabilidad digital?", description="La ética y responsabilidad digital implica el uso consciente y respetuoso de tecnologías, considerando el impacto de nuestras acciones en línea, protegiendo datos, respetando derechos y promoviendo un entorno seguro y honesto.", src="etical.png" />
+       
+       
+      <!-- Section types information -->  
+      <section class="p-4 bg-[#2A2A2A] min-h-screen">
+        <div class="text-center mb-8">
+          <h2 class="text-6xl font-koulen text-white mt-16">Consejos de Seguridad para la Proteccion de Datos Personales</h2>
+        </div>  
+
+        <div class="mt-20"> 
+          <Slider />
+        </div>
+          
+        </div>
+      </section> 
+       
+      <section class="p-4 bg-[#1A1A1A] min-h-screen">
+        <div class="text-center mb-8">
+          <h2 class="text-6xl font-koulen text-white mt-16">Principios Basicos de Etica y Responsabilidad Digital</h2>
+        </div>  
+         
+        <Table />
+          
+        </div>
+      </section>
+
+        </main> 
+        <Footer />
     </body>
-        
+     
+
 </html>
