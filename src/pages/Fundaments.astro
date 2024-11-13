@@ -1,7 +1,8 @@
 ---
 import Header from "../components/Header.astro"; 
 import Footer from "../components/Footer.astro"; 
-import Head from "../components/Head.astro";
+import Head from "../components/Head.astro"; 
+import Home from "../components/Home.astro";
 --- 
  
 <html>  
@@ -9,8 +10,9 @@ import Head from "../components/Head.astro";
     <body> 
         <Header /> <!-- Make Components the cards -->
         <main> 
-          <!-- Section Home -->
-      <section id="Fundaments" class="p-4 bg-[#1A1A1A]">
+          <!-- Section Home --> 
+           <Home title="¿Que es la informacion?", description="Conjunto de datos organizados con un significado determinado dentro de un contexto específico.", src="fundaments.png" />
+      <!-- <section id="Fundaments" class="p-4 bg-[#1A1A1A]">
         <div class="flex justify-between items-center mb-8">
           <div class="w-1/2"> 
             <p class="font-koulen text-7xl text-white mt-6">¿Que es la informacion?</p>
@@ -20,7 +22,7 @@ import Head from "../components/Head.astro";
             <img src="fundaments.png" alt="Image brain" class="object-cover rounded-md"  style="height: 600px; width: 400px;"/>
           </div>
         </div>  
-      </section>     
+      </section>  -->   
        
       <!-- Section types information -->  
       <section id="Cards" class="p-4 bg-[#2A2A2A]">

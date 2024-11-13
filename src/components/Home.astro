@@ -1,0 +1,17 @@
+---
+const { title, description, src } = Astro.props; 
+--- 
+ 
+<!-- Section Home -->
+<section id="Fundaments" class="p-4 bg-[#1A1A1A]">
+    <div class="flex justify-between items-center mb-8">
+      <div class="w-1/2"> 
+        <p class="font-koulen text-7xl text-white mt-6">{title}</p>
+        <p class="font-roboto text-4xl mt-8 text-white">{description}</p>
+      </div>
+      <div class="w-1/2 flex justify-end mt-20 mr-20"> 
+
+        <img src={src} alt="Image brain" class="object-cover rounded-md"  style="height: 600px; width: 400px;"/>
+      </div>
+    </div>  
+  </section> 

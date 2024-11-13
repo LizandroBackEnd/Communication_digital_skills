@@ -2,26 +2,18 @@
 import Header from "../components/Header.astro"; 
 import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro"; 
-import Types from "../components/Types.astro";
+import Types from "../components/Types.astro"; 
+import Home from "../components/Home.astro";
 --- 
  
 <html>  
-    <Head title="Communication" /> 
+    <Head title="Digital tools" />  
+    <Header />  
     <body>  
-        <Header /> 
-        <main> 
-            <!-- Section Home -->
-            <section id="Fundaments" class="p-4 bg-[#1A1A1A]">
-              <div class="flex justify-between items-center mb-8">
-                <div class="w-1/2"> 
-                  <p class="font-koulen text-7xl text-white mt-6">¿Que son las herramientas digitales de comunicacion?</p>
-                  <p class="font-roboto text-4xl mt-8 text-white">Las herramientas digitales de comunicación son aplicaciones o plataformas que permiten intercambiar información de forma sincrónica o asincrónica, facilitando la interacción y colaboración entre personas.</p>
-                </div>
-                <div class="w-1/2 flex justify-end mt-20 mr-20">
-                  <img src="tools.png" alt="Image brain" class="object-cover rounded-md"  style="height: 600px; width: 400px;"/>
-                </div>
-              </div>  
-            </section>  
+        
+        <main>  
+          <!--Test the component from Home  --> 
+          <Home title="¿Que son las herramientas digitales de comunicacion?", description="Las herramientas digitales de comunicación son aplicaciones o plataformas que permiten intercambiar información de forma sincrónica o asincrónica, facilitando la interacción y colaboración entre personas.", src="tools.png" />
              
             <!-- Section 1 -->     
              <section class="p-4 bg-[#2A2A2A]">  
