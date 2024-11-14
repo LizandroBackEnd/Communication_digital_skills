@@ -1,0 +1,103 @@
+<form id="myForm" class="bg-[#2A2A2A] p-6 rounded-lg max-w-md mx-auto space-y-4">
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <label for="name" class="block text-white font-roboto">Nombre</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="Name"
+        placeholder="Nombre"
+        required
+        class="w-full p-2 rounded border border-gray-500 bg-transparent text-gray-300 placeholder-gray-500"
+      />
+    </div>
+    <div>
+      <label for="lastName" class="block text-white font-roboto">Apellidos</label>
+      <input 
+        type="text" 
+        id="lastName" 
+        name="Last_name"
+        placeholder="Apellidos"
+        required
+        class="w-full p-2 rounded border border-gray-500 bg-transparent text-gray-300 placeholder-gray-500"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-white font-roboto">Actividad 1 (Cuadro Sinoptico)</label>
+    <div class="flex items-center space-x-2">
+      <input 
+        type="file" 
+        id="activity1" 
+        name="PDF"
+        accept=".pdf"
+        required
+        hidden
+        onchange="document.getElementById('fileName1').textContent = this.files[0]?.name || 'Seleccionar archivo...'"
+      />
+      <button 
+        type="button" 
+        onclick="document.getElementById('activity1').click()"
+        class="text-gray-300 border border-gray-500 bg-transparent p-2 rounded-lg hover:bg-gray-700 transition"
+      >
+        Seleccionar archivo
+      </button>
+      <span id="fileName1" class="text-gray-300">Seleccionar archivo...</span>
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-white font-roboto">Actividad 2 (Video)</label>
+    <div class="flex items-center space-x-2">
+      <input 
+        type="file" 
+        id="activity2" 
+        name="Video"
+        accept="video/*"
+        required
+        hidden
+        onchange="document.getElementById('fileName2').textContent = this.files[0]?.name || 'Seleccionar archivo...'"
+      />
+      <button 
+        type="button" 
+        onclick="document.getElementById('activity2').click()"
+        class="text-gray-300 border border-gray-500 bg-transparent p-2 rounded-lg hover:bg-gray-700 transition"
+      >
+        Seleccionar archivo
+      </button>
+      <span id="fileName2" class="text-gray-300">Seleccionar archivo...</span>
+    </div>
+  </div>
+
+  <button 
+    type="submit"
+    class="w-full bg-green-500 hover:bg-green-600 text-white font-roboto p-2 rounded-lg transition"
+  >
+    Enviar
+  </button>
+</form>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('myForm') as HTMLFormElement;
+    if (form) {
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+
+        const response = await fetch('https://back-skill.pockethost.io/api/collections/Tasks/records', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const result = await response.json();
+        console.log(result);
+
+        // Resetear el formulario después de enviarlo
+        form.reset();
+      });
+    }
+  });
+</script>
