@@ -1,0 +1,23 @@
+---
+
+interface Props {
+  href: string 
+  image: string 
+  title: string
+}
+const { href, title, image }:Props = Astro.props
+
+---
+
+
+<div class="overflow-hidden relative w-80 h-96 group rounded-lg">
+  <a href={href}>
+    <!-- Imagen con el efecto de escala solo cuando el contenedor es hover -->
+    <img src={image} alt="Fundaments information" class="w-full h-full object-cover rounded-lg transition-transform duration-500 transform group-hover:scale-110" />
+    
+    <!-- Fondo oscuro semi-transparente con el texto centrado -->
+    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg opacity-0 transition-opacity duration-500 group-hover:opacity-90">
+      <p class="text-white text-xl font-koulen">{title}</p>
+    </div>
+  </a>
+</div>

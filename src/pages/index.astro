@@ -1,73 +1,53 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro"; 
-import Head from "../components/Head.astro";
+import CardMenu from "../components/CardMenu.astro";
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html> 
-  <Head  title="CHD"/>
-  <body>
+<Layout title="CHD">
     <Header />
     <main>
       <!-- Section Home -->
-      <section id="Home" class="p-4 bg-[#1A1A1A]">
-        <div class="flex justify-between items-center mb-8">
-          <div class="w-1/2">
-            <p class="font-roboto text-7xl mt-3 text-white">La comunicación digital transforma habilidades en herramientas poderosas, conectando ideas y acercando oportunidades.</p>
-          </div>
-          <div class="w-1/2 flex justify-end">
-            <img src="brain.png" alt="Image brain" class="h-85 w-85 object-cover" />
-          </div>
-        </div>  
-      </section>
+ <section id="Home" class="p-10 md:p-20 bg-[#1A1A1A] md:h-screen flex flex-col md:flex-row  justify-center md:justify-between items-center">
+  <div class="w-full md:w-[800px] mb-6 md:mb-0 px-4">
+    <h1 class="font-roboto text-3xl md:text-5xl text-center md:text-left text-white">
+      La comunicación digital transforma habilidades en herramientas poderosas, conectando ideas y acercando oportunidades.
+    </h1>
+  </div>
+  <div class="">
+    <img src="brain.png" alt="Image brain" class="h-64 w-64 md:h-80 md:w-80 " />
+  </div>
+</section>
 
       <!-- Section cards -->
-<section id="Unidades" class="p-4 bg-[#2A2A2A]">
+      <section id="Unidades" class="p-20 bg-[#2A2A2A] md:h-screen">
   <div class="text-center mb-8 mt-12">
     <h2 class="text-6xl font-koulen text-white">Unidades</h2>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 mb-40">
-    <a href="Fundaments" class="relative group">
-      <img src="fundaments.png" alt="Fundaments information" class="w-full h-100 object-cover rounded-lg" />
-      <div class="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-        <p class="text-white text-xl font-koulen">Fundamentos de la informacion</p>
-      </div>
-    </a>
-    <a href="Communication" class="relative group">
-      <img src="communication.png" alt="Communication" class="w-full h-100 object-cover rounded-lg" />
-      <div class="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-        <p class="text-white text-xl font-koulen">Comunicacion efectiva</p>
-      </div>
-    </a>
-    <a href="Tools" class="relative group">
-      <img src="tools.png" alt="Tools communication" class="w-full h-100 object-cover rounded-lg" />
-      <div class="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-        <p class="text-white text-xl font-koulen">Herramientas digitales de comunicacion</p>
-      </div>
-    </a>
-    <a href="Etical" class="relative group">
-      <img src="etical.png" alt="Etical communication" class="w-full h-100 object-cover rounded-lg" />
-      <div class="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-        <p class="text-white text-xl font-koulen">Etica y responsabilidad digital</p>
-      </div>
-    </a>
+
+  <div class="flex justify-between mt-32 md:flex-row flex-col items-center "> 
+   <CardMenu href="Fundaments" title="Fundamentos de la información" image="fundaments.png" />
+   <CardMenu href="Communication" title="Comunicación efectiva" image="communication.png" />
+   <CardMenu href="" title="Herramientas digitales de comunicación" image="tools.png" />
+   <CardMenu href="Etical" title="Ética y responsabilidad digital" image="etical.png" />
   </div>
+
 </section>
-       
       <!-- Section end-->  
-      <section class="p-4 bg-[#1A1A1A]">
+      <section class="p-20 bg-[#1A1A1A] md:h-screen md:flex-row flex items-center justify-center">
         <div class="flex justify-between items-center mb-8 mt-20">
           <div class="w-1/2"> 
-            <p class="font-koulen text-8xl mt-3 text-white">¿Sabias que?</p>
-            <p class="font-roboto text-6xl mt-12 text-white">la cantidad total de datos digitales creados, capturados, y replicados a nivel mundial se espera que supere los 180 zettabytes para 2025.</p>
+            <p class="font-koulen text-7xl mt-3 text-green-500">¿Sabias que?</p>
+            <p class="font-roboto text-4xl mt-12 text-white">la cantidad total de datos digitales creados, capturados, y replicados a nivel mundial se espera que supere los 180 zettabytes para 2025.</p>
           </div>
           <div class="w-1/2 flex justify-end">
-            <img src="internet.png" alt="Image brain" class="h-85 w-85 object-cover rounded-md" />
+            <img src="internet.png" alt="Image brain" class="h-[400px] w-[400px] object-cover rounded-md" />
           </div>
         </div>  
       </section>
 
     </main>
     <Footer />
-  </body>
-</html>
+</Layout>
+
