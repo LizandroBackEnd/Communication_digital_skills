@@ -78,9 +78,14 @@
   </button>
 </form>
 
+<div id="successMessage" class="hidden text-center text-green-500 font-roboto mt-4">
+  Actividades enviadas correctamente.
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('myForm') as HTMLFormElement;
+    const successMessage = document.getElementById('successMessage');
     if (form) {
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -94,6 +99,11 @@
 
         const result = await response.json();
         console.log(result);
+
+        // Mostrar el mensaje de éxito
+        if (successMessage) {
+          successMessage.classList.remove('hidden');
+        }
 
         // Resetear el formulario después de enviarlo
         form.reset();
